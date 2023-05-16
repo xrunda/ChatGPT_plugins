@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: TeslaSalesData
+  description: plugin for Used to query the global sales data of Tesla in a certain month of 2022
+  version: 'v1'
+servers:
+  - url: http://localhost:5003
+paths:
+  /tslSD:
+    post:
+      operationId: getTslSD
+      summary: Get the sales data of Tesla
+      # parameters:
+      # - in: path
+      #   name: month
+      #   schema:
+      #       type: string
+      #   required: true
+      #   description: from which month of 2022.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/getTslSDRequest'
+      responses:
+        "200":
+          description: OK
+
+components:
+  schemas:
+    getTslSDRequest:
+      type: object
+      properties:
+        month:
+          type: number
+          description: Sales volume this month.

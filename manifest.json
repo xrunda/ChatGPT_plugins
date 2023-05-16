@@ -1,0 +1,19 @@
+{
+    "schema_version": "v1",
+    "name_for_human": "特斯拉销售数据V1",
+    "name_for_model": "teslaSaleData",
+    "description_for_human": "你可以获取到2022年某月的特斯拉全球销售数据",
+    "description_for_model": "plugin for Used to query the global sales data of Tesla in a certain month of 2022",
+    "auth": {
+      "type": "none"
+    },
+    "api": {
+      "type": "openapi",
+      "url": "http://localhost:5003/openapi.yaml",
+      "is_user_authenticated": false
+    },
+    "logo_url": "http://localhost:5003/logo.png",
+    "contact_email": "guangli@xrunda.com",
+    "legal_info_url": "http://example.com/legal"
+  }
+  
